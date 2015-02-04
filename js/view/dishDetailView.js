@@ -5,5 +5,10 @@ var DishDetailView = function (container, model) {
 	this.dishName = container.find("#nameOfDish");
 	this.dishName.html(model.getDish(1).name);
 
-	
+	this.dishPic = container.find("#dishImg");
+	this.dishPic.html("<img src='images/"+model.getDish(1).image+"' width='300px' height='300px'>");
+
+	this.dishDescription = container.find("#dishDesc");
+	this.dishDescription.html(model.getDish(1).description);
+
 }
