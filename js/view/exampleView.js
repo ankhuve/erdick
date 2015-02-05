@@ -8,8 +8,8 @@ var ExampleView = function (container, model) {
 
 	this.fullMenu = container.find("#fullMenu");
 	model.addDishToMenu(3);
-	// model.addDishToMenu(100);
-	// model.addDishToMenu(200);
+	model.addDishToMenu(100);
+	model.addDishToMenu(200);
 	var menuObject = model.getFullMenu();
 	var menuSummary = "";
 	for(dish in menuObject){
