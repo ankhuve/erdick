@@ -118,6 +118,29 @@ var DinnerModel = function() {
 		}
 	}
 
+	this.getDishOverview = function(id){
+		var selectedDish = this.getDish(id);
+		var allIngredients = [];
+		var details = "";
+		var totalPrice = 0;
+
+		for(ingredient in selectedDish.ingredients){
+			// details += selectedDish.ingredients[ingredient].name;
+				allIngredients.push(selectedDish.ingredients[ingredient]);
+			}
+
+
+		// var details = "";
+		details += "<table>";
+		for(ingredient in allIngredients){
+			details += "<tr><td class='col-md-1'>"+allIngredients[ingredient].quantity*guests+"</td><td class='col-md-2'>"+allIngredients[ingredient].unit+"</td>";
+			details += "<td class='col-md-3'>"+allIngredients[ingredient].name+"</td><td class='col-md-1'> SEK </td><td class='col-md-1'>"+allIngredients[ingredient].price*guests+"</td></tr>";
+			totalPrice += allIngredients[ingredient].price*guests;
+		}
+		details += "<td/><td/><td/><td>Total</td><td>"+totalPrice+"</td>";
+		details += "</table>";
+		return details;
+	}
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,

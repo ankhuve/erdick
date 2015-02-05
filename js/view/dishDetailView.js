@@ -4,6 +4,8 @@ var DishDetailView = function (container, model) {
   	// and/or ones that responed to interaction)
 	this.dishName = container.find("#nameOfDish");
 	this.dishName.html(model.getDish(1).name);
+	this.menuDetails = container.find("#dishOverview");
+	this.menuDetails.html(model.getDishOverview(1));
 
 	this.dishPic = container.find("#dishImg");
 	this.dishPic.html("<img src='images/"+model.getDish(1).image+"' width='300px' height='300px'>");
