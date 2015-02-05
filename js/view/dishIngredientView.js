@@ -15,9 +15,6 @@ var DishIngredientView = function (container, model) {
 	totalPriceRow += "</div>";
 	this.menuDetails.html(overview[0] + totalPriceRow);
 
-
-
-
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.numberOfGuests.html(model.getNumberOfGuests());
 }
