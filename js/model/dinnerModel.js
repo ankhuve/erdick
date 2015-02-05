@@ -137,7 +137,7 @@ var DinnerModel = function() {
 			details += "<td class='col-md-3'>"+allIngredients[ingredient].name+"</td><td class='col-md-1'> SEK </td><td class='col-md-1'>"+allIngredients[ingredient].price*guests+"</td></tr>";
 			totalPrice += allIngredients[ingredient].price*guests;
 		}
-		details += "<td/><td/><td/><td><strong>Total</strong></td><td><strong>"+totalPrice+"</strong></td>";
+		details += "<td/><td/><td/><td>Total</td><td>"+totalPrice+"</td>";
 		details += "</table>";
 		return details;
 	}
