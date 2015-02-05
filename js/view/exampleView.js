@@ -14,8 +14,8 @@ var ExampleView = function (container, model) {
 	var menuSummary = "";
 	for(dish in menuObject){
 		menuSummary += "<div class='row'>";
-		menuSummary += "<div class='col-md-8'>"+menuObject[dish].name+"</div>";
-		menuSummary += "<div class='col-md-4'>"+model.getPriceOfDish(menuObject[dish])+"</div>";
+		menuSummary += "<div class='col-md-9'>"+menuObject[dish].name+"</div>";
+		menuSummary += "<div class='col-md-2'>"+model.getPriceOfDish(menuObject[dish])+"</div>";
 		menuSummary += "</div>";
 	}
 

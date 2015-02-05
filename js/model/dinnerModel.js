@@ -140,17 +140,19 @@ var DinnerModel = function() {
 				allIngredients.push(selectedDish.ingredients[ingredient]);
 			}
 
-
-		// var details = "";
-		details += "<table>";
 		for(ingredient in allIngredients){
-			details += "<tr><td class='col-md-1'>"+allIngredients[ingredient].quantity*guests+"</td><td class='col-md-2'>"+allIngredients[ingredient].unit+"</td>";
-			details += "<td class='col-md-3'>"+allIngredients[ingredient].name+"</td><td class='col-md-1'> SEK </td><td class='col-md-1'>"+allIngredients[ingredient].price*guests+"</td></tr>";
+			details += "<div class='row'>";
+			details += "<div class='col-md-3'>"+allIngredients[ingredient].quantity*guests+" "+allIngredients[ingredient].unit+"</div>";
+			details += "<div class='col-md-6'>"+allIngredients[ingredient].name+"</div>";
+			details += "<div class='col-md-1'> SEK </div>";
+			details += "<div class='col-md-1'>"+allIngredients[ingredient].price*guests+"</div>";
+			details += "</div>";
 			totalPrice += allIngredients[ingredient].price*guests;
 		}
-		details += "<td/><td/><td/><td>Total</td><td>"+totalPrice+"</td>";
-		details += "</table>";
-		return details;
+		var answer = [];
+		answer[0] = details;
+		answer[1] = totalPrice;
+		return answer;
 	}
 
 	// the dishes variable contains an array of all the 
