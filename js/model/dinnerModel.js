@@ -33,7 +33,7 @@ var DinnerModel = function() {
 	this.getFullMenu = function() {
 		var fullMenu = [];
 		for(dish in menu){
-			fullMenu.push(menu[dish].name + "<br/>");
+			fullMenu.push(menu[dish]);
 		}
 		return fullMenu;
 	}
@@ -51,6 +51,7 @@ var DinnerModel = function() {
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
+		var totalPrice = 0;
 		for(dish in menu){
 			for(ingredient in menu[dish].ingredients){
 				totalPrice += menu[dish].ingredients[ingredient].price;
@@ -116,6 +117,16 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
+	}
+
+	this.getPriceOfDish = function(dish){
+		var priceOfDish = 0;
+		for(ingredient in dish.ingredients){
+			priceOfDish += dish.ingredients[ingredient].price;
+		}
+		
+		priceOfDish *= guests;
+		return priceOfDish;
 	}
 
 	this.getDishOverview = function(id){

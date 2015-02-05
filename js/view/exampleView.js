@@ -7,10 +7,19 @@ var ExampleView = function (container, model) {
 	this.minusButton = container.find("#minusGuest");
 
 	this.fullMenu = container.find("#fullMenu");
-	model.addDishToMenu(1);
-	model.addDishToMenu(100);
-	model.addDishToMenu(200);
-	this.fullMenu.html(model.getFullMenu());
+	model.addDishToMenu(3);
+	// model.addDishToMenu(100);
+	// model.addDishToMenu(200);
+	var menuObject = model.getFullMenu();
+	var menuSummary = "";
+	for(dish in menuObject){
+		menuSummary += "<div class='row'>";
+		menuSummary += "<div class='col-md-8'>"+menuObject[dish].name+"</div>";
+		menuSummary += "<div class='col-md-4'>"+model.getPriceOfDish(menuObject[dish])+"</div>";
+		menuSummary += "</div>";
+	}
+
+	this.fullMenu.html(menuSummary);
 
 	this.totalCost = container.find("#totalCost");
 	this.totalCost.html(model.getTotalMenuPrice());
