@@ -8,31 +8,38 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
   </head>
   <body>
 	<div class="container">
-		<h1 style="margin-bottom:30px;">HOMELETTE <small><i>From the best chefs in the world directly into your kitchen</i></small></h1>
-		<hr style='border-color:black;width:100%;border-width:3px;'>
+		<div class="header">
+			<h1>HOMELETTE <small><i>From the best chefs in the world directly into your kitchen</i></small></h1>
+		</div>
+		<hr id="headerDivider">
 		<div id="dinnerOverviewView">
-			<div class="row">
-				<div class="col-md-4">
-					<h2 style="margin-top:0px;">My Dinner: <span id="numberOfGuests"></span> people</h2>
+			<div class="row" id="myDinnerHeader">
+				<div class="col-md-4" >
+					<h2 id="myDinner">My Dinner: <span id="numberOfGuests"></span> people</h2>
 				</div>
-				<div class="col-md-4 col-md-offset-4"><input type="button" value="Go back and edit dinner"/></div>
+				<div class="col-md-4 col-md-offset-4">
+					<button id="backToEdit" class="btn btn-warning">Go back and edit dinner</button>
+				</div>
 			</div>
-			<hr style='border-color:black;width:100%;border-width:3px;'>
-			
-			<div class="row" id="imageRow"></div><!-- Images -->
-			
-			<div class="row" id="nameRow"></div> <!-- Names -->
-			
-			<div class="row" id="priceRow"></div> <!-- Prices -->
+
+			<hr id="headerDivider">
+			<div id="dinnerDetails">
+				<div class="row" id="imageRow"></div><!-- Images -->
+				
+				<div class="row" id="nameRow"></div> <!-- Names -->
+				
+				<div class="row" id="priceRow"></div> <!-- Prices -->
+			</div>	
 			
 			<hr style='border-color:black;width:100%;border-width:3px;'>
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
-					<center><input type="button" value="Print full recipe"/></center>
+					<center><button id="printRecipe" class="btn btn-warning">Print full recipe</button></center>
 				</div>
 			</div>
 		</div>
