@@ -8,4 +8,5 @@ $(function() {
 	var dishIngredientView = new DishIngredientView($("#dishIngredientView"), model);
 	var selectedDishView = new SelectDishView($("#selectDishView"), model);
 	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
+	var dinnerPreparationView = new DinnerPreparationView($("#dinnerPreparationView"),model);
 });
