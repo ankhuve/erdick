@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+	<div class="container">
+		<h1 style="margin-bottom:30px;">HOMELETTE <small><i>From the best chefs in the world directly into your kitchen</i></small></h1>
+		<hr style='border-color:black;width:100%;border-width:3px;'>
+		<div id="dinnerOverviewView">
+			<div class="row">
+				<div class="col-md-4">
+					<h2 style="margin-top:0px;">My Dinner: <span id="numberOfGuests"></span> people</h2>
+				</div>
+				<div class="col-md-4 col-md-offset-4"><input type="button" value="Go back and edit dinner"/></div>
+			</div>
+			<hr style='border-color:black;width:100%;border-width:3px;'>
+			<div class="row"><!-- Images -->
+				<div class="col-md-2 col-md-offset-1"><span id="imageDish0"></span></div>
+				<div class="col-md-2 col-md-offset-1"><span id="imageDish1"></span></div>
+				<div class="col-md-2 col-md-offset-1"><span id="imageDish2"></span></div>
+				<!-- <div class="col-md-2 col-md-offset-1"> Total </div> -->
+			</div>
+			<div class="row"> <!-- Names -->
+				<div class="col-md-2 col-md-offset-1"><span id="dishName0"></span></div>
+				<div class="col-md-2 col-md-offset-1"><span id="dishName1"></span></div>
+				<div class="col-md-2 col-md-offset-1"><span id="dishName2"></span></div>
+				<div class="col-md-2 col-md-offset-1"> Total </div>
+			</div>
+			<div class="row"> <!-- Prices -->
+				<div class="col-md-2 col-md-offset-1"><span id="dishCost0"></span> SEK</div>
+				<div class="col-md-2 col-md-offset-1"><span id="dishCost1"></span> SEK</div>
+				<div class="col-md-2 col-md-offset-1"><span id="dishCost2"></span> SEK</div>
+				<div class="col-md-2 col-md-offset-1"><span id="totalCost"></span> SEK</div>
+			</div>
+			<hr style='border-color:black;width:100%;border-width:3px;'>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<center><input type="button" value="Print full recipe"/></center>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/dishDetailView.js"></script>
+	<script src="js/view/selectDishView.js"></script>
+	<script src="js/view/dishIngredientView.js"></script>
+	<script src="js/view/dinnerOverviewView.js"></script>
+
+	<script src="js/app.js"></script>
+
+	<!-- <script src="js/view/exampleViewController.js"></script> -->
+  </body>
+</html>
