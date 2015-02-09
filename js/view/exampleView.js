@@ -5,11 +5,12 @@ var ExampleView = function (container, model) {
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-
 	this.fullMenu = container.find("#fullMenu");
-	model.addDishToMenu(3);
-	model.addDishToMenu(100);
-	model.addDishToMenu(200);
+
+	// model.addObserver(this.numberOfGuests);
+	// model.addDishToMenu(3);
+	// model.addDishToMenu(100);
+	// model.addDishToMenu(200);
 	var menuObject = model.getFullMenu();
 	var menuSummary = "";
 	for(dish in menuObject){
@@ -24,7 +25,8 @@ var ExampleView = function (container, model) {
 	this.totalCost = container.find("#totalCost");
 	this.totalCost.html(model.getTotalMenuPrice());
 
-	// this.plusButton.addEventListener('click', setNumberOfGuests(1));
+	// this.plusButton = container.find("#plusGuest");
+	// this.plusButton.addEventListener('click', model.setNumberOfGuests(1));
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	
