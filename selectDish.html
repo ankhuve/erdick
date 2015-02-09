@@ -16,10 +16,10 @@
 		<h1>HOMELETTE <small><i>From the best chefs in the world directly into your kitchen</i></small></h1>
 		<hr id="headerDivider">
 		<div class="row">
-			<div class="col-md-3">
-				<div id="exampleView">
+			<div id="exampleView">
+				<div class="col-md-3" id="leftPanel">
 					<div id="guestDetails">
-						<h2 style="margin-top:0px;">My Dinner</h2>
+						<h2>My Dinner</h2>
 						People: <span id="numberOfGuests"></span>
 						<div class="btn-group-vertical">
 							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-chevron-up"></span></button>
@@ -29,42 +29,40 @@
 					<div id="dishDetails">
 						<div id="chosenDish">
 							<h4>
-								<div class="row">
+								<hr id="subHeaderDivider">
+								<div class="row" id="subDishHeader">
 									<div class="col-md-9">Dish Name</div>
 									<div class="col-md-2">Cost</div>
 								</div>
+								<hr id="subHeaderDivider">
 							</h4>
 							<strong>
 								<span id="fullMenu"></span>
 							</strong>
 						</div>
-						<div id="cost">
-							<h3>SEK <span id="totalCost"></span></h3>
+						<hr id="priceDivider">
+						<div id="cost" class="col-md-6 col-md-offset-6">
+							<h3 class="totalCost">SEK <span id="totalCost"></span></h3>
 						</div>
 						<div id="confirm">
 							<button id="confirmDinner" class="btn btn-warning">Confirm Dinner</button>
 						</div>
 					</div>
-				</div><!-- Left Menu -->
+				</div>
 			</div>
-			<div class="col-md-9">
-				<h3> SELECT DISH </h3>
+			<div class="col-md-9" id="selectDish">
+				<h3 class="offset"> Select Dish </h3>
+				<hr id="subHeaderDivider">
 
-				<hr style="border-width:95%; border-color:black;">
-				<div class="row">
-					
-					<div class="input-group">
-						<div class="col-md-5"> <!-- Search bar and shit -->
-			     	 		<input type="text" class="form-control" placeholder="Enter keywords">
-			     	 	
-			      			<span class="input-group-btn">
-			        			<button class="btn btn-default" type="button">Search</button>
-			      			</span>
-		      			</div>
-			    		
-		  			</div>
-		  			<!-- Dropdown Menu -->
-		  			<div class="dropdown">
+				<form class="form-inline offset">
+					<div class="form-group">
+				  	<div class="input-group">
+				    	<input type="text" class="form-control" id="exampleInputAmount" placeholder="Enter key words">
+				  	</div>
+					</div>
+					<button type="submit" class="btn btn-warning">Search</button>
+
+					<div class="dropdown">
 				 		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 					    Select dishtype
 					    	<span class="caret"></span>
@@ -75,13 +73,19 @@
 					    	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
 					  	</ul>
 					</div>
+				</form>
+
+					
+				
+	  			<!-- Dropdown Menu -->
+	  			
+				
+				<hr id="subHeaderDivider">
+				
+				<div id="selectDishView">
+					<span id="allDeezDishes"></span>
 				</div>
-				<hr style="border-width:95%; border-color:black;">
-				<div class="row">
-					<div id="selectDishView">
-						<span id="allDeezDishes"></span>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

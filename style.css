@@ -94,3 +94,89 @@ h4{
 h3{
 	text-transform: uppercase;
 }
+
+.btn-group-vertical .btn{
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#subDishHeader{
+	background-color: #E8E8E8;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#confirmDinner{
+	width: 90%;
+	margin-left: 5%;
+}
+
+.totalCost{
+	margin-top: 0px;
+}
+
+#subHeaderDivider{
+	border-color:black;
+	width:100%;
+	border-width:2px;
+	margin: 0px;
+}
+
+#leftPanel{
+	height: 85vh;
+	border-right: black solid 2px;
+	padding-right: 0px;
+}
+
+#selectDish{
+	padding-left: 0px;
+}
+
+.offset{
+	padding-left: 50px;
+}
+
+#foodBackground {
+	background-image:url("images/food-background.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	min-width:100%;
+	height:1080px;
+}
+
+#startScreenHeader {
+	background-color:rgba(225,205,145,0.8);
+	color:black;
+}
+
+#quickStartBox {
+	margin-top:100px;
+	background-color:rgba(255,255,255,0.8);
+	margin-left:15px;
+	padding-bottom:15px;
+}
+
+#quickBoxMargin {
+	margin-left:30px;
+}
+
+.quickBoxHeader {
+	text-transform:none;
+	font-family: 'Varela Round', sans-serif;
+}
+
+#priceDivider.reduceMargin {
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
+.form-inline{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
