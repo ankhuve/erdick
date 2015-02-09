@@ -177,10 +177,22 @@ h3{
 }
 
 .form-inline{
-	margin-top: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 20px;
 }
 
 .dropdown{
 	display: inline;
+}
+
+#search{
+	background-color: #FFE7AD;
+}
+
+h3.offset{
+	padding-top: 20px;
+	margin-top: 0px;
+}
+
+#topDishRow{
+	margin-top: 40px;
 }

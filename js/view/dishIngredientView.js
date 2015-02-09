@@ -24,7 +24,7 @@ var DishIngredientView = function (container, model) {
 	returnstring += "<hr id='priceDivider'>";
 	returnstring += "<div class='row'>";
 	returnstring += "<div class='col-md-4'>";
-	returnstring += "<center><input type='button' value='Confirm dish'></center>";
+	returnstring += "<center><button class='btn btn-warning'>Confirm dish</button></center>";
 	returnstring += "</div>";
 	returnstring += "<div class='col-md-offset-5 col-md-1'> SEK </div>";
 	returnstring += "<div class='col-md-1'>"+totalPrice+"</div>";
