@@ -8,11 +8,11 @@ var DinnerPreparationView = function (container, model) {
 
 	var returnstring = "";
 	for(dish in fullMenu){
-		returnstring += "<div class='row'>";
+		returnstring += "<div class='row' id='dishDetailsRow'>";
 		returnstring += "<div class='col-md-2'><img src='images/"+fullMenu[dish].image+"'></div>";
 
 		returnstring += "<div class='col-md-4'>";
-		returnstring += "<h3><strong>"+fullMenu[dish].name+"</strong></h3>";
+		returnstring += "<h3 class='dishName'><strong><p class='text-uppercase'>"+fullMenu[dish].name+"</p></strong></h3>";
 		for(ingredient in fullMenu[dish].ingredients){
 			returnstring += fullMenu[dish].ingredients[ingredient].name + "<br/>";
 		}

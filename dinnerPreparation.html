@@ -8,20 +8,24 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
   </head>
   <body>
 	<div class="container">
-		<h1 style="margin-bottom:30px;">HOMELETTE <small><i>From the best chefs in the world directly into your kitchen</i></small></h1>
-		<hr style='border-color:black;width:100%;border-width:3px;'>
+		<h1>HOMELETTE <small><i>From the best chefs in the world directly into your kitchen</i></small></h1>
+		<hr id="headerDivider">
 		<div id="dinnerPreparationView">
-			<div class="row">
+			<div class="row" id="myDinnerHeader">
 				<div class="col-md-4">
-					<h2 style="margin-top:0px;">My Dinner: <span id="numberOfGuests"></span> people</h2>
+					<h2 id="myDinner">My Dinner: <span id="numberOfGuests"></span> people</h2>
 				</div>
-				<div class="col-md-4 col-md-offset-4"><input type="button" value="Go back and edit dinner"/></div>
+				<div class="col-md-4 col-md-offset-4">
+					<button id="backToEdit" class="btn btn-warning">Go back and edit dinner</button>
+				</div>
 			</div>
-			<hr style='border-color:black;width:100%;border-width:3px;'>
+
+			<hr id="headerDivider">
 			<div id="preparations"></div>
 		</div>
 		
