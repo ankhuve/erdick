@@ -1,7 +1,7 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
 
-	var guests = 3;
+	var guests = 4;
 	var menu = []
 	var observers = [];
  
@@ -9,14 +9,25 @@ var DinnerModel = function() {
 		observers.push(observer);
 	}
 
-	var notifyObservers = function(obj) {
+	var notifyObservers = function(arg) 
+	{
+		for(var i=0; i<observers.length; i++) 
+		{
+			observers[i].update(arg);
+		}	
+	}
+
+	this.getObservers = function(){
+		var returnedObservers = [];
 		for(observer in observers){
-			observers[observer].Notify(obj);
+			returnedObservers.push(observers[observer]);
 		}
+		return returnedObservers;
 	}
 
 	this.setNumberOfGuests = function(num) {
 		guests = num;
+		notifyObservers();
 	}
 
 	this.getNumberOfGuests = function() {

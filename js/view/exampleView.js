@@ -7,7 +7,11 @@ var ExampleView = function (container, model) {
 	this.minusButton = container.find("#minusGuest");
 	this.fullMenu = container.find("#fullMenu");
 
-	// model.addObserver(this.numberOfGuests);
+	model.addObserver(this);
+	this.update = function(arg){
+		this.numberOfGuests.html(model.getNumberOfGuests());
+		this.totalCost.html(model.getTotalMenuPrice());
+	}
 	// model.addDishToMenu(3);
 	// model.addDishToMenu(100);
 	// model.addDishToMenu(200);
